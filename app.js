@@ -29,34 +29,34 @@ divOla.innerHTML = "<p> Olá, " + name + "!! <br><br> Esta preparada? <br></p>";
 
 function temaUm(){
   button.style.display = "none";
-
-// um For utilizado para simplificar o codigo e interagir com as arrays
+  
+  // um For utilizado para simplificar o codigo e interagir com as arrays
   for (var i = 0; i < 3; i++){
     var pergunta = prompt (gamesPerguntas[i] + "\n" + gamesRespostaA[i] + "\n" + gamesRespostaB[i] + "\n" + gamesRespostaC[i] + "\n" + gamesRespostaD[i]);
-
+    
     if (pergunta.toUpperCase() == gamesCorretas[i]){
       certo++;
     }else{
       errado++;
     }
-
+    
     console.log("certo = " + certo + " errado = "+ errado);
   }
-
-
+  
+  
   divOla.style.display = "none";
-
+  
   resposta.innerHTML = "<h2> Respostas Corretas </h2><br>" + gamesPerguntas[0] + "<br>" + gamesRespostaB[0] + "<br><br>" +
-   gamesPerguntas[1] + "<br>" + gamesRespostaC[1] + "<br><br>" +
-   gamesPerguntas[2] + "<br>" + gamesRespostaD[2] + "<br><br>";
+  gamesPerguntas[1] + "<br>" + gamesRespostaC[1] + "<br><br>" +
+  gamesPerguntas[2] + "<br>" + gamesRespostaD[2] + "<br><br>";
   resposta.style.visibility = "visible";
-
+  
   if (certo == 3){
     final.innerHTML = "You rocks! Agora chame uma amiguinha pra jogar também :)";
   }else{
     final.innerHTML = "Você acertou " + certo + "/3"
   }
-
+  
   final.style.visibility = "visible";
   buttonFinal.style.visibility = "visible";
   errado = 0;
@@ -79,35 +79,35 @@ var filmesCorretas = ["D","B","C"];
 
 
 function temaDois(){
-
+  
   button.style.display = "none";
-
+  
   for (var i = 0; i < 3; i++){
     var pergunta = prompt (filmesPerguntas[i] + "\n" + filmesRespostaA[i] + "\n" + filmesRespostaB[i] + "\n" + filmesRespostaC[i] + "\n" + filmesRespostaD[i]);
-
+    
     if (pergunta.toUpperCase() == filmesCorretas[i]){
       certo++;
     }else{
       errado++;
     }
-
+    
     console.log("certo = " + certo + " errado = "+ errado);
   }
-
-
+  
+  
   divOla.style.display = "none";
-
+  
   resposta.innerHTML = "<h2> Respostas Corretas </h2><br>" + filmesPerguntas[0] + "<br>" + filmesRespostaD[0] + "<br><br>" +
-   filmesPerguntas[1] + "<br>" + filmesRespostaB[1] + "<br><br>" +
-   filmesPerguntas[2] + "<br>" + filmesRespostaC[2] + "<br><br>";
+  filmesPerguntas[1] + "<br>" + filmesRespostaB[1] + "<br><br>" +
+  filmesPerguntas[2] + "<br>" + filmesRespostaC[2] + "<br><br>";
   resposta.style.visibility = "visible";
-
+  
   if (certo == 3){
     final.innerHTML = "Arrasou! Partiu Netflix pra saber mais ainda :P";
   }else{
     final.innerHTML = "Você acertou " + certo + "/3"
   }
-
+  
   final.style.visibility = "visible";
   buttonFinal.style.visibility = "visible";
   errado = 0;
@@ -129,10 +129,10 @@ function return2(){
   buttonFinal.style.visibility = "hidden";
   resposta.style.visibility = "hidden";
   var name = prompt ("Qual seu nome?");
-
+  
   button.style.visibility = "visible";
   divOla.innerHTML = "<p> Olá, " + name + "!! <br> Esta preparada? <br></p>";
-
+  
   divOla.style.display = "initial";
   button.style.display = "initial";
 }
